@@ -3,6 +3,10 @@ import 'package:vimeo_player_flutter/vimeo_player_flutter.dart';
 
 class VimeoFrame extends StatefulWidget {
 
+  String lien;
+
+  VimeoFrame(this.lien);
+
   @override
   _VimeoFrameState createState() => _VimeoFrameState();
 }

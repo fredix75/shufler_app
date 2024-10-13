@@ -3,6 +3,10 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class YoutubeFrame extends StatefulWidget
 {
+  String lien;
+
+  YoutubeFrame(this.lien);
+
   @override
   State<YoutubeFrame> createState() => _YoutubeFrameState();
 }
@@ -14,7 +18,7 @@ class _YoutubeFrameState extends State<YoutubeFrame> {
   void initState() {
     super.initState();
     _controller = YoutubePlayerController(
-      initialVideoId: YoutubePlayer.convertUrlToId('https://www.youtube.com/watch?v=kOh0CkVlTzQ')!,
+      initialVideoId: YoutubePlayer.convertUrlToId(widget.lien)!,
       flags: const YoutubePlayerFlags(
         autoPlay: true,
         mute: false,
